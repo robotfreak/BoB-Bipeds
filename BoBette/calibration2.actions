@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Action>
+    <Frames>
+      <Frame>
+        <State>
+          <double>78.960498960498938</double>
+          <double>49.022869022869017</double>
+          <double>58.004158004158008</double>
+          <double>52.276507276507282</double>
+        </State>
+      </Frame>
+    </Frames>
+    <Loop>false</Loop>
+    <Delay>25</Delay>
+    <Name>Action.001</Name>
+  </Action>
+</ArrayOfAction>
