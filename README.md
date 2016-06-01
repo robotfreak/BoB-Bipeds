@@ -29,7 +29,7 @@ My BoB the Biped robots
 
 ###Part list
 
-* Arduino Mini clone Wattduino Pro 3,3V
+* Arduino Mini clone Wattduino Pro 5V
 * 4 x 9G Servos 
 * 1 x 8x8 minature LED matrice
 * 1 x HC-SR04 ultrasonic sensor
