@@ -34,13 +34,6 @@
           <double>36.798336798336791</double>
         </State>
       </Frame>
-    </Frames>
-    <Loop>false</Loop>
-    <Delay>25</Delay>
-    <Name>left.001</Name>
-  </Action>
-  <Action>
-    <Frames>
       <Frame>
         <State>
           <double>62.744282744282742</double>
@@ -76,6 +69,6 @@
     </Frames>
     <Loop>false</Loop>
     <Delay>25</Delay>
-    <Name>right.002</Name>
+    <Name>walk</Name>
   </Action>
 </ArrayOfAction>
