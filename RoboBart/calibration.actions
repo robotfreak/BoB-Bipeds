@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Action>
+    <Frames>
+      <Frame>
+        <State>
+          <double>69.564134495641341</double>
+          <double>55.417185554171851</double>
+          <double>64.9813200498132</double>
+          <double>57.011207970112054</double>
+        </State>
+      </Frame>
+    </Frames>
+    <Loop>false</Loop>
+    <Delay>25</Delay>
+    <Name>Calibration.001</Name>
+  </Action>
+</ArrayOfAction>
