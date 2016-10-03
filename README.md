@@ -1,5 +1,5 @@
 # BoB-Bipeds
-My BoB the Biped robots 
+My little Biped robot army. The bipeds are clones of Bob the Beped by Kevin Biagini. The Poser Software is adopted from the [Fobo Poser Software](http://www.projectbiped.com/prototypes/fobo/poser)
 
 ##BoBette
 
@@ -55,6 +55,9 @@ My BoB the Biped robots
 * 1 x 3.7V Lipo
 * 1 x 60x50mm vero board
 
+##Poser
+
+[Poser](https://github.com/robotfreak/BoB-Bipeds/tree/master/Poser) is the software to create the movement frames for the bipeds. The Poser Software is adopted from the [Fobo Poser Software](http://www.projectbiped.com/prototypes/fobo/poser)
 
 ###Videos
 
