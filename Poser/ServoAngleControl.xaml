@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ServoControl.ServoAngleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ServoControl"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="40"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <local:BoundedSlider Grid.Row="7" Grid.Column="1"  Margin="5" x:Name="angleSlider"></local:BoundedSlider>
+        <Label Name="nameLabel" HorizontalAlignment="Center" VerticalAlignment="Center">servo name</Label>
+        <Button Grid.Column="2"  FontSize="12" Name="propertiesButton" Visibility="Hidden">prop</Button>
+
+    </Grid></UserControl>

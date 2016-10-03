@@ -1,0 +1,59 @@
+﻿<Window x:Class="ServoControl.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About" Height="610" Width="600" WindowStyle="ToolWindow" ResizeMode="NoResize" >
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Source="/BoBPoser;component/Images/BoB%20clean.png" Grid.Column="1"></Image>
+        <StackPanel>
+            <Label FontWeight="Bold" Content="BoB Poser version 1.2"></Label>
+            <Label Foreground="DarkGray" Content="July 6, 2013"></Label>
+            <TextBlock TextWrapping="WrapWithOverflow" Margin="0,10,0,0" Foreground="blue">
+
+  This program allows the BoB Biped Robot to be posed remotely.  Connect BoB to the computer using a USB cable.  An external power source is needed for BoB (the usb won't power the robot).
+            </TextBlock>
+
+            <TextBlock TextWrapping="WrapWithOverflow" Margin="0,10,0,10" Foreground="blue">
+Copyright (C) 2012  Jonathan Dowdall, Project Biped (www.projectbiped.com)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/licenses/.
+            </TextBlock>
+        </StackPanel>
+
+        <Border Grid.Row="1" Grid.ColumnSpan="2" Height="30" VerticalAlignment="Top" Background="LightGray">
+            <Label FontWeight="Bold">Revision History</Label>
+        </Border>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,30,0,0">        
+        <StackPanel >
+            <Label FontWeight="Bold" Foreground="DarkBlue">Version 1.2 ( 7-06-2013)</Label>
+            <Label  Margin="10,-10,0,0">* Ported for BoB Control by RobotFreak</Label>
+            <Label  Margin="10,-10,0,0">* Added save file dialog to action export</Label>
+            <Label  Margin="10,-10,0,0">* Made action export only write the key frames</Label>
+            <Label  Margin="10,-10,0,0">* Made action export write full working Arduino program that uses the action</Label>
+            <Label  Margin="10,-10,0,0">* Fixed the calibration array output to match the format of the action array output (100* angle)</Label>
+            <Label  Margin="10,-10,0,0">* Fixed the connection button so that it changed state properly</Label>
+            <Label  Margin="10,-10,0,0">* Added a check to make sure a valid response was received from FOBO to establish a connection</Label>
+        </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Window>
