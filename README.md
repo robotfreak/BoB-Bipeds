@@ -43,6 +43,18 @@ My BoB the Biped robots
 * Wires of different colours
 * 2 x 30mm M3 Spacers
 
+##RoboBart
+
+[RoboBart](https://github.com/robotfreak/BoB-Bipeds/tree/master/RoboBart) is a bided using an ESP8266 WiFi as contoller and a chassis parts of aluminium.
+
+###Part list
+
+* Adafruit Huzzah ESP8266
+* 4 x HXT900 servos
+* 1 x Sharp GP2Y0D810Z0F digital distance sensor
+* 1 x 3.7V Lipo
+* 1 x 60x50mm vero board
+
 
 ###Videos
 
@@ -52,7 +64,7 @@ My BoB the Biped robots
 
 * [Letsmakerobots - FrankenBoB](http://letsmakerobots.com/node/37736)
 * [Tutorial: Teach your BoB howto walk](http://letsmakerobots.com/node/38483)
-* [Letsnmakerobots - Little Red BoBette](http://letsmakerobots.com/node/38908)
+* [Letsmakerobots - Little Red BoBette](http://letsmakerobots.com/node/38908)
 * [Makezine - Bob the Biped](http://makezine.com/2013/08/25/build-your-own-biped-robot/)
 
 
