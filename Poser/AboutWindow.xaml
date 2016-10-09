@@ -11,7 +11,7 @@
             <RowDefinition Height="350"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Image Source="/BoBPoser;component/Images/BoB%20clean.png" Grid.Column="1"></Image>
+        <Image Source="/BoBPoser;component/Images/BOB-3D.png" Grid.Column="1"></Image>
         <StackPanel>
             <Label FontWeight="Bold" Content="BoB Poser version 1.2"></Label>
             <Label Foreground="DarkGray" Content="July 6, 2013"></Label>

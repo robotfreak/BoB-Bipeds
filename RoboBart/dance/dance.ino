@@ -1,115 +1,4 @@
-﻿/*
-//    FOBO Poser application
-//      This program allows FOBO to be posed into different positions.
-//
-//    Copyright (C) 2012  Jonathan Dowdall, Project Biped (www.projectbiped.com)
-//
-//    This program is free software: you can redistribute it and/or modify
-//    it under the terms of the GNU General Public License as published by
-//    the Free Software Foundation, either version 3 of the License, or
-//    (at your option) any later version.
-//
-//    This program is distributed in the hope that it will be useful,
-//    but WITHOUT ANY WARRANTY; without even the implied warranty of
-//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//    GNU General Public License for more details.
-//
-//    You should have received a copy of the GNU General Public License
-//    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
 
-using System;
-using System.Windows;
-using System.Runtime.InteropServices;
-using System.Windows.Interop;
-using System.Windows.Media;
-
-
-namespace ServoControl
-{
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //Delegates
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public delegate void    StringDelegate(string text);
-        public delegate void    DoubleDelegate(double value);
-        public delegate void    IntDelegate(int value);
-        public delegate void    PointDelegate(string text, Point value);
-        public delegate double  DoubleResultDelegate();
-        public delegate void    ServoDelegate(Servo value);
-        public delegate void    BlankDelegate();
-        public delegate void    BoolDelegate(bool value);
-        public delegate void    SinglePointDelegate(Point point);
-        public delegate void    FrameDelegate(Frame frame);
-
-        class Tools
-        {
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            //External Functions
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            [DllImport("dwmapi.dll")]
-            static extern int DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS pMarInset);
-            [DllImport("dwmapi.dll")]
-            extern static int DwmIsCompositionEnabled(ref int en);
-
-            public const int WM_DWMCOMPOSITIONCHANGED = 0x031E;
-
-
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// <summary>
-            /// Extends the glass area into the client area of the window
-            /// </summary>
-            /// <param name="window"></param>
-            /// <param name="top"></param>
-            public static void ExtendGlass(Window window, Thickness thikness)
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            {
-                try
-                {
-                    int isGlassEnabled = 0;
-                    DwmIsCompositionEnabled(ref isGlassEnabled);
-                    if (Environment.OSVersion.Version.Major > 5 && isGlassEnabled > 0)
-                    {
-                        // Get the window handle
-                        WindowInteropHelper helper = new WindowInteropHelper(window);
-                        HwndSource mainWindowSrc = (HwndSource)HwndSource.
-                            FromHwnd(helper.Handle);
-                        mainWindowSrc.CompositionTarget.BackgroundColor =
-                            Colors.Transparent;
-
-                        // Get the dpi of the screen
-                        System.Drawing.Graphics desktop = System.Drawing.Graphics.FromHwnd(mainWindowSrc.Handle);
-                        float dpiX = desktop.DpiX / 96;
-                        float dpiY = desktop.DpiY / 96;
-
-                        // Set Margins
-                        MARGINS margins = new MARGINS();
-                        margins.cxLeftWidth = (int)(thikness.Left * dpiX);
-                        margins.cxRightWidth = (int)(thikness.Right * dpiX);
-                        margins.cyBottomHeight = (int)(thikness.Bottom * dpiY);
-                        margins.cyTopHeight = (int)(thikness.Top * dpiY);
-
-                        window.Background = Brushes.Transparent;
-
-                        int hr = DwmExtendFrameIntoClientArea(mainWindowSrc.Handle,
-                                    ref margins);
-                    }
-                    else
-                    {
-                        window.Background = SystemColors.WindowBrush;
-                    }
-                }
-                catch (DllNotFoundException)
-                {
-
-                }
-            }
-
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            public static string ArduinoProgramStart()
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            {
-                string program =
-    @"
 
 //    BoB action playback
 //      This program was generated by BoB Poser to playback a specific action.
@@ -281,16 +170,20 @@ class Action
 // 2 left ankle
 // 3 left hip
 /////////////////////////////////////////////
-";
-                return program;
-            }
+int frames[5][4] = {
+                      { 6000,  6000,  6000,  6000 },
+                      {11000,  6000,  1700,  6000 },
+                      { 6000,  6000,  6000,  6000 },
+                      { 1835,  6000, 10363,  6000 },
+                      { 6000,  6000,  6000,  6000 }
+};
+int calibration[4] = {956, -458, 498, -298 };
 
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            public static string ArduinoProgramEnd()
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            {
-                string program =
-    @"Action* currentAction;                //pointer to the current action
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Actions
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Action myAction(5, 50, 50, frames); //the action
+Action* currentAction;                //pointer to the current action
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void setup()
@@ -395,20 +288,5 @@ void SetServoPositions(int* frame)
     ServosSetPosition(servo, pwm);       
   }
 
-
-}
-";
-                return program;
-            }
-        }
-
-    [StructLayout(LayoutKind.Sequential)]
-    struct MARGINS
-    {
-        public int cxLeftWidth;
-        public int cxRightWidth;
-        public int cyTopHeight;
-        public int cyBottomHeight;
-    }
 
 }

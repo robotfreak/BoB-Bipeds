@@ -21,11 +21,9 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.IO.Ports;
+using System.Linq;
 using System.Threading;
-using System.Windows.Threading;
 
 namespace ServoControl
 {
@@ -106,26 +104,11 @@ namespace ServoControl
             SerialPort port = new SerialPort();
             List<string> portNames = new List<string>();
 
-
-            for(int p = 0; p < 33; p++)
+            var myPort = SerialPort.GetPortNames();
+            foreach (string portname in myPort)
             {
-                port.PortName = "COM" + p;
-
-                try
-                {
-                    port.Open();
-                }
-                catch (Exception e) 
-                { 
-                    continue;
-                }
-                if (port.IsOpen)
-                {
-                    portNames.Add(port.PortName);
-                    port.Close();
-                }
+                portNames.Add(portname);
             }
-
             return portNames;
         }
 

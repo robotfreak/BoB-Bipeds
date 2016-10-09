@@ -86,6 +86,7 @@
     <Compile Include="BoundedSlider.xaml.cs">
       <DependentUpon>BoundedSlider.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs" />
     <Compile Include="CommunicationManager.cs" />
     <Compile Include="Experiments.cs" />
     <Compile Include="GroupDisplayPanel.xaml.cs">
@@ -210,6 +211,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\BoB clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BOB-3D.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

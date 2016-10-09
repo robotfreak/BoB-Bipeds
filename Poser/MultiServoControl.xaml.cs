@@ -25,17 +25,11 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Threading;
 using System.Xml.Serialization;
 using System.IO;
 using Microsoft.Win32;
-using System.Windows.Interop;
 
 namespace ServoControl
 {
@@ -596,7 +590,7 @@ namespace ServoControl
                 dialog.CheckFileExists = false;
                 dialog.AddExtension = true;
                 dialog.DefaultExt = ".txt";
-                dialog.Filter = "Arduino files (*.pde)|*.pde|All files (*.*)|*.*";
+                dialog.Filter = "Arduino files (*.ino)|*.ino|All files (*.*)|*.*";
 
                 //browse and save
                 if (dialog.ShowDialog() == true)
