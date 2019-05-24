@@ -3,13 +3,13 @@ My little Biped robot army. The bipeds are clones of Bob the Beped by Kevin Biag
 
 ##BoBette
 
-###Introduction
+### Introduction
 
 [BoBette](https://github.com/robotfreak/BoB-Bipeds/tree/master/BoBette) is a biped robot using a Wattduino pro mini controller and a 3D printed chassis. Thanks to Kevin Biagini for the design files
 
 [![BoBette](https://farm8.staticflickr.com/7649/16310389023_fe9cec09c5_m.jpg)](https://github.com/robotfreak/BoB-Bipeds/tree/master/BoBette)
 
-###Part list
+### Part list
 
 * Arduino Mini 3,3V
 * 4 x HXT900 9G servos
@@ -18,16 +18,16 @@ My little Biped robot army. The bipeds are clones of Bob the Beped by Kevin Biag
 * 1 x 3.7V Lipo
 * 1 x 60x30mm vero board
 
-##FrankenBoB
+## FrankenBoB
 
-###Introduction
+### Introduction
 
 [FrankenBob](https://github.com/robotfreak/BoB-Bipeds/tree/master/FrankenBoB) is a Biped robot using a Wattduino Pro Mini as controller and a chassis made out of Polystyrol (PS) sheets.
 
 [![FrankenBoB](https://farm9.staticflickr.com/8745/16904592476_468dfd8e70_m.jpg)](https://github.com/robotfreak/BoB-Bipeds/tree/master/FrankenBoB)
 
 
-###Part list
+### Part list
 
 * Arduino Mini clone Wattduino Pro 5V
 * 4 x 9G Servos 
@@ -43,11 +43,11 @@ My little Biped robot army. The bipeds are clones of Bob the Beped by Kevin Biag
 * Wires of different colours
 * 2 x 30mm M3 Spacers
 
-##RoboBart
+## RoboBart
 
 [RoboBart](https://github.com/robotfreak/BoB-Bipeds/tree/master/RoboBart) is a bided using an ESP8266 WiFi as contoller and a chassis parts of aluminium.
 
-###Part list
+### Part list
 
 * Adafruit Huzzah ESP8266
 * 4 x HXT900 servos
@@ -55,15 +55,15 @@ My little Biped robot army. The bipeds are clones of Bob the Beped by Kevin Biag
 * 1 x 3.7V Lipo
 * 1 x 60x50mm vero board
 
-##Poser
+## Poser
 
 [Poser](https://github.com/robotfreak/BoB-Bipeds/tree/master/Poser) is the software to create the movement frames for the bipeds. The Poser Software is adopted from the [Fobo Poser Software](http://www.projectbiped.com/prototypes/fobo/poser)
 
-###Videos
+### Videos
 
 [![FrankenBoB - First moves](https://i.ytimg.com/vi/UIgT7IzsuSw/2.jpg?time=1427320359142)](https://www.youtube.com/watch?v=UIgT7IzsuSw) FrankenBoB - First moves
 
-###Weblinks
+### Weblinks
 
 * [Letsmakerobots - FrankenBoB](http://letsmakerobots.com/node/37736)
 * [Tutorial: Teach your BoB howto walk](http://letsmakerobots.com/node/38483)
