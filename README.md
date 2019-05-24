@@ -1,7 +1,7 @@
 # BoB-Bipeds
 My little Biped robot army. The bipeds are clones of Bob the Beped by Kevin Biagini. The Poser Software is adopted from the [Fobo Poser Software](http://www.projectbiped.com/prototypes/fobo/poser)
 
-##BoBette
+## BoBette
 
 ### Introduction
 
